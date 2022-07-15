@@ -1,0 +1,19 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER, price INTEGER);
+INSERT INTO store VALUES (1, "long sleeve shirt", 50, 1, 20.00);
+INSERT INTO store VALUES (2, "short sleeve shirt", 48, 1, 18.00);
+INSERT INTO store VALUES (3, "light jeans", 49, 2, 39.99);
+INSERT INTO store VALUES (4, "dark jeans", 40, 2, 39.99);
+INSERT INTO store VALUES (5, "beige linen shorts", 45, 2, 24.99);
+INSERT INTO store VALUES (6, "light jean shorts", 38, 2, 28.99);
+INSERT INTO store VALUES (7, "dark jean shorts", 43, 2, 28.99);
+INSERT INTO store VALUES (8, "black tank top", 30, 1, 14.99);
+INSERT INTO store VALUES (9, "black crop top", 47, 1, 16.99);
+INSERT INTO store VALUES (10, "white crop top", 53, 1, 16.99);
+INSERT INTO store VALUES (11, "white tank top", 43, 1, 14.99);
+INSERT INTO store VALUES (12, "black linen shorts", 12, 2, 24.99);
+INSERT INTO store VALUES (13, "white socks", 53, 3, 4.99);
+INSERT INTO store VALUES (14, "black jacket", 23, 3, 39.99);
+INSERT INTO store VALUES (15, "purse", 32, 3, 49.99);
+
+SELECT MAX(price) FROM store; 
+SELECT SUM(quantity) FROM store GROUP BY aisle;
