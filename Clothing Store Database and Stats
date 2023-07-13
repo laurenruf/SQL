@@ -1,4 +1,7 @@
+--Create a clothing store database. 
+
 CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER, price INTEGER);
+
 INSERT INTO store VALUES (1, "long sleeve shirt", 50, 1, 20.00);
 INSERT INTO store VALUES (2, "short sleeve shirt", 48, 1, 18.00);
 INSERT INTO store VALUES (3, "light jeans", 49, 2, 39.99);
@@ -13,7 +16,14 @@ INSERT INTO store VALUES (11, "white tank top", 43, 1, 14.99);
 INSERT INTO store VALUES (12, "black linen shorts", 12, 2, 24.99);
 INSERT INTO store VALUES (13, "white socks", 53, 3, 4.99);
 INSERT INTO store VALUES (14, "black jacket", 23, 3, 39.99);
-INSERT INTO store VALUES (15, "purse", 32, 3, 49.99);
+INSERT INTO store VALUES (15, "Black blazer", 32, 3, 49.99);
 
+--display the database ordered by price. 
+SELECT * FROM store
+ORDER BY price desc; 
+
+--display highest clothing item price.
 SELECT MAX(price) FROM store; 
+
+--display number of clothing items in each aisle.
 SELECT SUM(quantity) FROM store GROUP BY aisle;
